@@ -12,8 +12,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val appUpdater = AppUpdater(this)
-                .setDisplay(Display.DIALOG)
-                .setUpdateFrom(UpdateFrom.JSON)
+            .setDisplay(Display.DIALOG)
+            .setUpdateFrom(UpdateFrom.JSON)
+            .setUpdateJSON("https://github.com/fcarodev/AutoUpdateDemo/blob/master/app/update.json")
         appUpdater.start()
     }
 }
